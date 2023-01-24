@@ -8,7 +8,6 @@ from sklearn import metrics as met
 import scikitplot as skplt
 from sklearn.calibration import CalibratedClassifierCV, CalibrationDisplay
 import plotly.graph_objects as go
-import plotly.graph_objects as go
 from plotly.graph_objects import Layout
 
 def sum_table(df_):
@@ -63,8 +62,8 @@ def df_to_image(df, head_color, table_color):
                     fill_color=table_color,
                     align='center',
                     line_color='darkslategray',
-                    font=dict(color='black', size=13),
-                    height=30),
+                    font=dict(color='black', size=16),
+                    height=35),
         ), layout=Layout(paper_bgcolor='rgba(0,0,0,0)', width=1980, height=600))
     
     fig.show()
