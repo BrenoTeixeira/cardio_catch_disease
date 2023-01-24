@@ -230,7 +230,7 @@ Final table after testing the models on different scenarios.
 
 
 ### **Cross-Validation Metrics**
-<img src='images/readme_fig/cross_val_comp.png'>
+<img src='images/readme_fig/cross_val_comp.PNG'>
 
 XGBoost has the worst performance of the three models. LightGBM and CatBoost had very similar results; LightGBM has a slightly better f1-score with a lower fit time, as shown in the table below.
 <p>&nbsp;<p>
@@ -301,7 +301,7 @@ The worst scenario for the new solution is better than the best scenario of the 
 
 # 8.0. Conclusions
 
-In this project, a machine learning model (classifier) was built to help the team of specialists in heart disease diagnosis. The model has a precision of 0.759 95% CI [0.747, 0.772]. Since the diagnostic price depends on its precision, we expect at least an 83.33% increase in profit per diagnostic.
+In this project, a machine learning model (classifier) was built to help the team of specialists in heart disease diagnosis. The model has a precision of 0.759 - 95% CI [0.747, 0.772]. Since the diagnostic price depends on its precision, compared with the current situation (55-65%), we expect at least an 83.33% increase in profit per diagnostic.
 
 <p>&nbsp;<p>
 
@@ -318,8 +318,12 @@ In this project, a machine learning model (classifier) was built to help the tea
 - Use Hypothesis tests on the Exploratory Analysis.
 - Use statistical methods to compare the classifiers performances.
 
-
-
 ![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)
+
+
+# Google Sheets
+<img src='images/readme_fig/google_sheets_demo.gif'>
+
+<p>&nbsp;<p>
 
 #### This project was made by Breno Teixeira.
