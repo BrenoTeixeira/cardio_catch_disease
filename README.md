@@ -8,7 +8,7 @@
 
 <p>&nbsp;<p>
 
-## The objective of this project is to develop a tool to predict heart disease at early stages with a good and stable precision to bring more profit for the company.
+## The objective of this project is to develop a tool to predict heart disease at early stages with good and stable precision to bring more profit for the company.
 
 <p>&nbsp;<p>
 
@@ -64,13 +64,13 @@
 
 # 1.0. Business Problem.
 
-Cardio Catch Disease is a fictional company that is specialized in heart disease detection at its early stages. Its business model is a service — the company offers early heart disease diagnostics for a specific price.
+Cardio Catch Disease is a fictional company that specializes in heart disease detection at its early stages. Its business model is a service — the company offers early heart disease diagnostics for a specific price.
 
 **Currently Scenario**
 
-    The heart disease diagnostic is made manually by a team of specialists. The precision is between 55% and 65% because of the complecity of the diagnosis process, and the team's fatigue. The cost of each diagnostic, including equipement and payment sheet, is around $900,00.
+    The heart disease diagnostic is made manually by a team of specialists. The precision is between 55% and 65% because of the complexity of the diagnosis process, and the team's fatigue. The cost of each diagnostic, including equipment and payment sheet, is around $900,00.
 
-    The price of the diagnostics varies with the precision achived by the team of specialists. It works like this: for every 5% precision above 50%, the customer pays $500.00. If the diagnostic has a precision of 55%, the customer pays $500.00; for a precision of 60%, the customer has to pay $1000.00, and so on. If the precision is 50% or lower the customer doesn't have to pay.
+    The price of the diagnostics varies with the precision achieved by the team of specialists. It works like this: for every 5% precision above 50%, the customer pays $500.00. If the diagnostic has a precision of 55%, the customer pays $500.00; for a precision of 60%, the customer has to pay $1000.00, and so on. If the precision is 50% or lower the customer doesn't have to pay.
 
     The problem is that the team's precision is highly variable (range of 10%), making the business unstable. In the worst-case scenario (55% precision), the company has a $400.00 loss. In the best-case (65% precision), it has a $600.00 revenue.
 
@@ -115,7 +115,7 @@ My strategy to solve this challenge was:
 
 ## 3.1. Load the Data & Data Description
 
-First, the data was obtained from [kaggle](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset), then a part of the data was selected for the test set.
+First, the data was obtained from [kaggle](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset), and then a part of the data was selected for the test set.
 After that, I checked the number of instances on the data and possible inconsistencies like missing values, data types, and duplicates. I also used some descriptive statistics to have an overview of the data.
 
 **Summary Table**
@@ -156,21 +156,21 @@ In this step, I created pipelines to prepare the data to train the model using t
 
 ## 3.6. Feature Selection
 
-The selection of features was made using `BorutaPy` from the `boruta` library.    
+The selection of features was done using `BorutaPy` from the `boruta` library.    
 
 ## 3.7. Machine Learning Modeling
 
-Here, Multiple tests with different scenarios were made to compare the performances of different models. The models were trained with and without scaling the continuous variables, using the features selected by BorutaPy, and using all the features.
+Here, Multiple tests with different scenarios were made to compare the performances of different models. The models were trained with and without scaling the continuous variables, using the features selected by BorutaPy and using all the features.
 
 After that, the three models with the best performances were picked for a deeper analysis of them and to compare their general performances using cross-validation.
 
 ## 3.8. Hyperparameter Fine Tuning
 
-After picking the model with the best performance from the top 3 of the previous section, `optuna` — a library of optimization — was used to tune the hyperparaments.
+After picking the model with the best performance from the top 3 of the previous section, `optuna` — a library of optimization — was used to tune the hyperparameters.
 
 ## 3.9. Model Calibration
 
-After fine tuning, I calibrated the model and checked the model's performance.
+After fine-tuning, I calibrated the model and checked the model's performance.
 
 ## 3.10. Convert Model Performance to Business Values
 
@@ -181,7 +181,7 @@ Using the test data, we assess the business performance if the model is implemen
 
 API implemented on render cloud.
 
-Built a Google Sheets script to request the API, with a click on a button, and return the probabilities predictions. This way, people have easy access to the model's predictions. We also can use this as a test environment, adding new data and changing some attributes to see how the results changes.
+Built a Google Sheets script to request the API, with a click on a button, and return the probabilities predictions. This way, people have easy access to the model's predictions. We also can use this as a test environment, adding new data and changing some attributes to see how the results change.
 
 # 4.0 Exploratory Analysis
 
@@ -198,14 +198,14 @@ Built a Google Sheets script to request the API, with a click on a button, and r
 <img src='images/readme_fig/h1_age_class.png' height=350>
 
 
-FALSE: The proportion of people above 50 years old and that have heart disease is 14% higher than the overall proportion, and 54.9% higher than those below 50 years old.
+FALSE: The proportion of people above 50 years old that have heart disease is 14% higher than the overall proportion, and 54.9% higher than those below 50 years old.
 <p>&nbsp;<p>
 
 **Hypothesis 02:** Overweight people correspond to 30% of the patients with heart disease.
 
 <img src='images/readme_fig/h3_obese.png' height=350>
 
-TRUE: Approximately 36% o people with heart disease, but we have a similar proportion for people who don't have a cardio disease.
+TRUE: Approximately 36% of people with heart disease, but we have a similar proportion for people who don't have a cardio disease.
 <p>&nbsp;<p>
 
 **Hypothesis 03:** Of the people with heart disease, 65% have high blood pressure
@@ -286,7 +286,7 @@ The calibrated classifier has better precision, but the other metrics are worse.
 
 # 7.0. Business Results
 
-Here we can see the worst and best-case scenarios for the business in the current diagnostic process and in the proposed solution with machine learning.
+Here, we can see the worst and best-case scenarios for the business in the current diagnostic process and in the proposed solution with machine learning.
 
 ## 7.1. Current Business Performance
 
@@ -314,9 +314,9 @@ In this project, a machine learning model (classifier) was built to help the tea
 
 # 10.0. Next Steps to Improve
 
-- Improve the Google Sheets scripts with error treatment, and allow the user to run the script only for selected rows.
+- Improve the Google Sheets scripts with error treatment and allow users to run the script only for selected rows.
 - Use Hypothesis tests on the Exploratory Analysis.
-- Use statistical methods to compare the classifiers performances.
+- Use statistical methods to compare the classifiers' performances.
 
 ![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)
 
@@ -326,4 +326,4 @@ In this project, a machine learning model (classifier) was built to help the tea
 
 <p>&nbsp;<p>
 
-#### This project was made by Breno Teixeira.
+#### This project was developed by Breno Teixeira.
